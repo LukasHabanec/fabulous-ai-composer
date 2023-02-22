@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Composer</title>
+    <link rel="stylesheet" th:href="@{/styles.css}"/>
+
+</head>
+<body>
+
+<h1>Welcome</h1>
+<ul>
+    <li><a th:href="@{/composer/composition/new}">New Composition</a></li>
+</ul>
+<ul th:each="file : ${files}">
+    <li><a th:text="${file}" th:href="@{'/composer/composition/load/' + ${file}}"></a></li>
+</ul>
+
+
+
+
+</body>
+</html>
